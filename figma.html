@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(44, 38, 38);
+            color: white;
+        }
+        
+        .layout {
+            display: flex;
+            align-items: center;
+        }
+
+        .sub {
+            display: flex;
+            gap: 20px;
+        }
+
+        .logo2 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px 0;
+            text-align: center;
+            background-color: rgb(44, 38, 38);
+            color: white;
+        }
+
+        .submit>input {
+            padding: 10px 20px;
+            border: 1px solid white;
+            border-radius: 3px;
+            color: white;
+            background-color: rgb(44, 38, 38);
+        }
+
+        .hp {
+            display: flex;
+            flex-direction: column;
+            gap: 10px 0;
+            text-align: center;
+            font-size: 20px;
+            margin: 70px;
+        }
+
+        .box1 {
+            width: 385px;
+            height: 277px;
+            flex-shrink: 0;
+            border-radius: 5px;
+            background: #C96408;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+            color: white;
+        }
+
+        .box2 {
+            width: 385px;
+            height: 277px;
+            flex-shrink: 0;
+            border-radius: 5px;
+            background: #7937bb;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+            color: white;
+            position: relative;
+        }
+
+        .box3 {
+            width: 385px;
+            height: 277px;
+            flex-shrink: 0;
+            border-radius: 5px;
+            background: #3775ed;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+            color: white;
+            position: relative;
+
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+        }
+
+        .hoa_box {
+            position: relative;
+        }
+
+        .hoa1 {
+            position: absolute;
+            top: -120px;
+            left: -20px;
+        }
+
+        .hoa2 {
+            position: absolute;
+            top: -120px;
+            right: -20px;
+        }
+
+        .hoa3 {
+            position: absolute;
+            top: -80px;
+            left: 160px;
+        }
+
+        .search {
+            position: absolute;
+            top: 30px;
+            left: 170px;
+        }
+
+        .card {
+            position: absolute;
+            top: 30px;
+            left: 170px;
+        }
+
+        .container2 {
+            width: auto;
+            height: 347px;
+            border-radius: 5px;
+            background-color: #1A1919;
+            color: white;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .h22 {
+            color: #FFF;
+            font-family: Aeonik;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+
+        }
+
+        .pp1 {
+            margin: 10px;
+            font-family: Aeonik;
+            font-size: 18px;
+        }
+
+        .it1 {
+            border-radius: 50px;
+            position: absolute;
+            top: 20px;
+
+        }
+
+        .it2 {
+            border-radius: 50px;
+            position: absolute;
+            bottom: 20px;
+            right: 200px;
+        }
+
+        .it3 {
+            border-radius: 50px;
+            position: absolute;
+            bottom: 50px;
+            right: 70px;
+
+        }
+
+        .it4 {
+            border-radius: 50px;
+            position: absolute;
+            top: 70px;
+            right: 50px;
+        }
+
+        .it5 {
+            border-radius: 50px;
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+        }
+
+        .it6 {
+            border-radius: 50px;
+            position: absolute;
+            top: 25px;
+            right: 240px;
+        }
+
+        .h33 {
+            margin: 20px;
+
+        }
+
+        .imgg {
+            position: relative;
+            width: 282px;
+            height: 304px;
+
+        }
+
+        .text {
+            position: absolute;
+            bottom: 0;
+            background: rgba(110, 101, 101, 0.521);
+            width: 282px;
+            height: 60px;
+        }
+
+        .text_logo {
+
+            display: flex;
+
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .one {
+            display: flex;
+            align-items: center;
+        }
+
+        .imgg h3 {
+
+            margin: 0 10px;
+        }
+
+        .imgg1 {
+            position: relative;
+            width: 282px;
+            height: 304px;
+        }
+
+        .text1 {
+            position: absolute;
+            bottom: 0;
+            background: rgba(110, 101, 101, 0.521);
+            width: 282px;
+            height: 60px;
+
+        }
+
+        .text1 h3 {
+            margin: 0 10px;
+        }
+
+        .text_logo1 {
+            display: flex;
+
+            justify-content: space-between;
+            padding: 10px;
+
+        }
+
+        .one1 {
+            display: flex;
+            align-items: center;
+        }
+
+        .container3 {
+            display: flex;
+
+            flex-wrap: wrap;
+            gap: 10px;
+
+        }
+
+        .imgg2b {
+            position: relative;
+            width: 282px;
+            height: 304px;
+        }
+
+        .imgg2b h3 {
+            margin: 0 10px;
+        }
+
+        .text2b {
+            position: absolute;
+            bottom: 0;
+            background: rgba(110, 101, 101, 0.521);
+            width: 282px;
+            height: 60px;
+
+        }
+
+        .text_logo1b {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+
+        }
+
+        .one1b {
+            display: flex;
+            align-items: center;
+        }
+
+        .imgg2bba {
+            position: relative;
+            width: 282px;
+            height: 304px;
+        }
+
+        .text2bab {
+            position: absolute;
+            bottom: 0;
+            background: rgba(110, 101, 101, 0.521);
+            width: 282px;
+            height: 60px;
+        }
+
+        .text_logo1ba {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .one1ba {
+            display: flex;
+            align-items: center;
+        }
+
+        .imgg2bba h3 {
+            margin: 0 10px;
+        }
+
+        .imgg2b2a {
+            position: relative;
+            width: 282px;
+            height: 304px;
+        }
+
+        .text2b2b {
+            position: absolute;
+            bottom: 0;
+            background: rgba(110, 101, 101, 0.521);
+            width: 282px;
+            height: 60px;
+        }
+
+        .one2ba {
+            display: flex;
+            align-items: center;
+        }
+
+        .img21g {
+            position: relative;
+            width: 282px;
+            height: 304px;
+
+        }
+
+        .text2c {
+            position: absolute;
+            bottom: 0;
+            background: rgba(110, 101, 101, 0.521);
+            width: 282px;
+            height: 60px;
+        }
+
+        .text_logo1c {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .one1c {
+            display: flex;
+            align-items: center;
+        }
+
+        .img21g h3 {
+            margin: 0 10px;
+        }
+
+
+        .background1 {
+            margin: 50px;
+            width: auto;
+            height: 200px;
+            background-color: #1A1919;
+            color: white;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .get input {
+            width: 170px;
+            height: 50px;
+            background-color: #3775ED;
+            position: absolute;
+            left: 650px;
+
+            bottom: 150px;
+        }
+
+        .background2 {
+            width: auto;
+            height: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px;
+            position: relative;
+            font-family: Aeonik;
+            font-style: normal;
+
+        }
+
+        .pic1 {
+            width: 378px;
+            height: 152px;
+            border: 0px solid;
+            background-color: #444040;
+            color: white;
+            padding: 30px;
+
+
+        }
+
+        .pp {
+            width: 342px;
+            height: 60px;
+        }
+
+        .itempic {
+            display: flex;
+            padding: 10px;
+            ;
+        }
+
+        .itempic p {
+            display: flex;
+            align-items: center;
+        }
+
+        .container4 {
+            width: 1200px;
+            height: 480px;
+            margin: 20px;
+        }
+
+        .footer2 {
+            width: 1200px;
+            height: 291px;
+            border-radius: 10px;
+            background-color: #3775ED;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+
+        }
+
+        .Do {
+            width: 749px;
+            height: 60px;
+            color: #FFF;
+            font-family: Aeonik;
+            font-size: 50px;
+            font-weight: 700;
+            position: absolute;
+
+        }
+
+        .be {
+            width: 544px;
+            height: 26px;
+            color: #FFF;
+            font-family: Aeonik;
+            font-size: 22px;
+            font-weight: 400;
+            padding: 100px;
+
+        }
+
+        .join {
+            width: 204px;
+            height: 50px;
+            border-radius: 5px;
+            background: #1A1919;
+            color: white;
+            position: absolute;
+            bottom: 10px;
+
+        }
+        .join p{
+            display: flex;
+            justify-content: center;
+        }
+        .and{
+            width: auto;
+            height: 20px;
+            position: relative;
+            display: flex;
+           background-color: #1A1919;
+
+        }
+        .p{
+            width: 109px;
+            height: 19px;
+        }
+
+        .cl{
+            width: 81px;
+            height: 22px;
+        }
+       body{
+        background-color: #1A1919;
+       }
+       *{
+        color: white;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="layout">
+            <img src="logoclubweb.png" alt="" width="40PX" height="40px">
+            <h2 class="h2a">Clubweb</h2>
+        </div>
+
+        <div>
+            <ul class="sub">
+                <li>Features</li>
+                <li>Pricing</li>
+                <li>Learn</li>
+                <input type="submit" value="Join Clubwebers">
+            </ul>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="logo2">
+            <h1>Get a customized <span style="color: blue;">website</span> for your business and brand.</h1>
+            <p>You need a brand yes. You need a website. Get someone to create. Relax and Chill</p>
+            <div class="submit">
+                <input style="background-color: blue;" type="submit" value="Get stared">
+                <input type="submit" value="Get featured">
+            </div>
+        </div>
+    </div>
+    <div class="laptop" style="">
+        <img src="laptop.jpg.png" alt="" width="1550">
+    </div>
+    <div class="hp">
+        <h2>Let us build a website with your ideas</h2>
+        <p>Get website developers to create your marketing website and portfolio faster</p>
+    </div>
+    <div class="box">
+        <div class="box1">
+            <div class="hoa_box">
+                <h3 style="font-size: 30px;">E-commerce website</h3>
+                <p>Engage a developer to create a customized e-commerce site at low cost</p>
+
+                <img class="hoa1" src="SI (1).png" alt="">
+                <img class="hoa2" src="SI (1).png" alt="">
+                <img class="hoa3" src="Cartasa.jpg" alt="">
+
+            </div>
+        </div>
+        <div class="box2">
+            <h3 style="font-size: 30px;"> Portfolio website </h3>
+            <p>A portfolio website is a profile website by nature, so this is the place to get a deveoper</p>
+            <img class="search" src="Search.jpg" alt="" width="50px">
+        </div>
+        <div class="box3">
+            <h3 style="font-size: 30px;">Marketing website</h3>
+            <p>This is a website created with lot of marketing advantage. Do you have one?</p>
+            <img class="card" src="Card.jpg" alt="" width="50px">
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="container2">
+        <div class="logoo2">
+            <h2 class="h22">Choose any tool of your choice</h2>
+            <p class="pp1">Webflow, bubble, vue and react + 5 other development tools for your website</p>
+            <img class="it1" src="../index/img/Ellipse 13.jpg" alt="">
+            <img class="it2" src="../index/img/Ellipse 14.jpg" alt="">
+            <img class="it3" src="../index/img/Ellipse 15.jpg" alt="">
+            <img class="it4" src="../index/img/Ellipse 16.jpg" alt="">
+            <img class="it5" src="../index/img/Ellipse 18.jpg" alt="">
+            <img class="it6" src="../index/img/Ellipse 19.jpg" alt="">
+        </div>
+
+    </div>
+    <div class="h33">
+        <h2 class="h2h" style="font-size: 30px;">Featured Developers</h2>
+        <p class="p2p" style="font-size: 20px;">Use our featured developers for your web projects</p>
+    </div>
+    <div class="container3">
+
+        <div class="imgg">
+            <img src="../index/img/gau.jpg.jpg" alt="">
+            <div class="text">
+                <h3>Agbama Ulimhuka</h3>
+                <div class="text_logo1">
+                    <div class="one1">
+                        <img src="../index/img/www.jpg" alt="">
+                        <p>Webflow developer</p>
+                    </div>
+                    <img src="../index/img/Group (1).jpg" alt="" width="20px" height="20px">
+                </div>
+
+            </div>
+        </div>
+        <div class="imgg1">
+            <img src="../index/img/gau2.jpg.jpg" alt="">
+            <div class="text1">
+                <h3>Surita Patnam</h3>
+                <div class="text_logo1">
+                    <div class="one1">
+                        <img src="../index/img/bbb.jpg" alt="">
+                        <p>Bubble developer</p>
+                    </div>
+                    <img src="../index/img/Vector.jpg" alt="" width="20px" height="20px">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="imgg2b">
+            <img src="../index/img/gau3.jpg" alt="">
+            <div class="text2b">
+                <h3>Richard Bomaventure</h3>
+                <div class="text_logo1b">
+                    <div class="one1b">
+                        <img src="../index/img/hoa121.jpg" alt="">
+                        <p>React.js developer</p>
+                    </div>
+                    <img src="../index/img/Group (1).jpg" alt="" width="20px" height="20px">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="imgg2bba">
+            <img src="../index/img/gau4.jpg" alt="">
+            <div class="text2bab">
+                <h3>Elliana James</h3>
+                <div class="text_logo1ba">
+                    <div class="one1ba">
+                        <img src="../index/img/v3.jpg" alt="">
+                        <p>Vue.js developer</p>
+                    </div>
+                    <img src="../index/img/Group (1).jpg" alt="" width="20px" height="20px">
+                </div>
+            </div>
+        </div>
+
+        <div class="imgg2b2a">
+            <img src="../index/img/gau5.jpg" alt="">
+            <div class="text2b2b">
+                <h3>Richard Bomaventure</h3>
+                <div class="text_logo1ba">
+                    <div class="one2ba">
+                        <img src="../index/img/hoa121.jpg" alt="">
+                        <p>React.js developer</p>
+                    </div>
+                    <img src="../index/img/Group (1).jpg" alt="" width="20px" height="20px">
+                </div>
+            </div>
+        </div>
+        <div class="img21g">
+            <img src="../index/img/gau6.jpg" alt="">
+            <div class="text2c">
+                <h3>Samuel Oghenakaro</h3>
+                <div class="text_logo1c">
+                    <div class="one1c">
+                        <img src="../index/img/www.jpg" alt="">
+                        <p>Webflow developer</p>
+                    </div>
+                    <img src="../index/img/Group (1).jpg" alt="" width="20px" height="20px">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="background1">
+        <div class="get">
+            <input type="text" value="Get featured">
+        </div>
+
+        <div>
+            <h2>Message from users</h2>
+            <p>Read what they say about clubweb, our users have the say</p>
+        </div>
+    </div>
+
+    <div class="container3">
+        <div class="backgrounda2">
+            <div class="pic1">
+                <div class="pp">
+                    <p>
+                    <p>With clubweb i got a business website within 24hrs. This made a lot of sales while at home. I am
+                        happy to
+                        have found you guys early. Thanks </p>
+                    </p>
+                </div>
+                <div class="itempic">
+                    <img src="../index/img/unsplash_iFgRcqHznqg.jpg" alt="">
+                    <p>Adebanjo Oludare</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="backgrounda2">
+            <div class="pic1">
+                <div class="pp">
+                    <p>
+                    <p>With clubweb i got a business website within 24hrs. This made a lot of sales while at home. I am
+                        happy to
+                        have found you guys early. Thanks </p>
+                    </p>
+                </div>
+                <div class="itempic">
+                    <img src="../index/img/unsplash_iFgRcqHznqg.jpg" alt="">
+                    <p>Adebanjo Oludare</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="backgrounda2">
+            <div class="pic1">
+                <div class="pp">
+                    <p>
+                    <p>With clubweb i got a business website within 24hrs. This made a lot of sales while at home. I am
+                        happy to
+                        have found you guys early. Thanks </p>
+                    </p>
+                </div>
+                <div class="itempic">
+                    <img src="../index/img/unsplash_iFgRcqHznqg.jpg" alt="">
+                    <p>Adebanjo Oludare</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="backgrounda2">
+            <div class="pic1">
+                <div class="pp">
+                    <p>
+                    <p>With clubweb i got a business website within 24hrs. This made a lot of sales while at home. I am
+                        happy to
+                        have found you guys early. Thanks </p>
+                    </p>
+                </div>
+                <div class="itempic">
+                    <img src="../index/img/unsplash_iFgRcqHznqg.jpg" alt="">
+                    <p>Adebanjo Oludare</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="backgrounda2">
+            <div class="pic1">
+                <div class="pp">
+                    <p>
+                    <p>With clubweb i got a business website within 24hrs. This made a lot of sales while at home. I am
+                        happy to
+                        have found you guys early. Thanks </p>
+                    </p>
+                </div>
+                <div class="itempic">
+                    <img src="../index/img/unsplash_iFgRcqHznqg.jpg" alt="">
+                    <p>Adebanjo Oludare</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="backgrounda2">
+            <div class="pic1">
+                <div class="pp">
+                    <p>
+                    <p>With clubweb i got a business website within 24hrs. This made a lot of sales while at home. I am
+                        happy to
+                        have found you guys early. Thanks </p>
+                    </p>
+                </div>
+                <div class="itempic">
+                    <img src="../index/img/unsplash_iFgRcqHznqg.jpg" alt="">
+                    <p>Adebanjo Oludare</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="backgrounda2">
+            <div class="pic1">
+                <div class="pp">
+                    <p>
+                    <p>With clubweb i got a business website within 24hrs. This made a lot of sales while at home. I am
+                        happy to
+                        have found you guys early. Thanks </p>
+                    </p>
+                </div>
+                <div class="itempic">
+                    <img src="../index/img/unsplash_iFgRcqHznqg.jpg" alt="">
+                    <p>Adebanjo Oludare</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="backgrounda2">
+            <div class="pic1">
+                <div class="pp">
+                    <p>
+                    <p>With clubweb i got a business website within 24hrs. This made a lot of sales while at home. I am
+                        happy to
+                        have found you guys early. Thanks </p>
+                    </p>
+                </div>
+                <div class="itempic">
+                    <img src="../index/img/unsplash_iFgRcqHznqg.jpg" alt="">
+                    <p>Adebanjo Oludare</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="backgrounda2">
+            <div class="pic1">
+                <div class="pp">
+                    <p>
+                    <p>With clubweb i got a business website within 24hrs. This made a lot of sales while at home. I am
+                        happy to
+                        have found you guys early. Thanks </p>
+                    </p>
+                </div>
+                <div class="itempic">
+                    <img src="../index/img/unsplash_iFgRcqHznqg.jpg" alt="">
+                    <p>Adebanjo Oludare</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container4">
+        <div class="img10">
+            <img src="../index/img/Rectangle 52.jpg" alt="">
+
+        </div>
+    </div>
+    <div class="footer2">
+        <div class="Do">
+            <p>Do you want to be a clubweber?</p>
+        </div>
+        <div class="be">
+            <p>Be part of an exciting community of website developers</p>
+        </div>
+        <div class="join">
+            <p>Join clubweb</p>
+        </div>
+    </div>
+    <div class="and">
+        <div class="p">
+            <p>Privacy policy</p>
+        </div>
+        
+          <img src="../index/img/social links (1).jpg" alt="">
+        
+        <div class="cl">
+            <p>Clubwebs</p>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
